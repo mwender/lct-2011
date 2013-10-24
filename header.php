@@ -22,16 +22,26 @@
 		$main_menu = array( 'Tickets', 'Store', 'Contact', 'Participants', 'SevierHeights.org' );
 		foreach( $main_menu as $post_title ){
 			$page = get_page_by_title( $post_title );
-			if( $page && ! is_wp_error( $page ) )
+			if( $page && ! is_wp_error( $page ) ){
 				$ids[$page->post_title] = $page->ID;
+			} else {
+				$ids[$post_title] = 0;
+			}
 		}
 		foreach( $ids as $post_title => $ID ){
-			$search = array( ' ', '.org' );
-			$replace = array( '-', '' );
-			$post_title = strtolower( str_replace( $search, $replace, $post_title ) );
-			echo '<li';
-			if( $post_title == $post->post_title ) echo ' class="current_page"';
-			echo '><a href="'.get_permalink( $ID ).'" id="page-' . $post_title . '">'.$post_title.'</a></li>';
+			switch( $post_title ){
+				case 'SevierHeights.org':
+					echo '<li><a id="page-sevierheights" href="http://sevierheights.org" target="_blank">SevierHeights.org</a></li>';
+				break;
+				default:
+					$search = array( ' ', '.org' );
+					$replace = array( '-', '' );
+					$post_title = strtolower( str_replace( $search, $replace, $post_title ) );
+					echo '<li';
+					if( $post_title == $post->post_title ) echo ' class="current_page"';
+					echo '><a href="'.get_permalink( $ID ).'" id="page-' . $post_title . '">'.$post_title.'</a></li>';
+				break;
+			}
 		}
 		?></ul><!-- #nav -->
 		<div id="content">
