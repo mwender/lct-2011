@@ -36,6 +36,7 @@ body{background: transparent url('includes/images/body.bkgrd.jpg') repeat-x; fon
 ul#nav{list-style: none; margin: 0; height: 47px; clear: both}
 ul#nav li{margin: 0; float: left; height: 47px}
 ul#nav li a{display: block; line-height: 47px; background: transparent url(includes/img/menu.png) no-repeat; text-indent: -9999px}
+/*
 ul#nav li a#page-about{width: 113px;}
 ul#nav li a#page-about:hover, ul#nav li.current_page a#page-about{background-position: 0 -47px}
 ul#nav li a#page-get-involved{width: 186px; background-position: -113px 0}
@@ -48,6 +49,18 @@ ul#nav li a#page-store{width: 110px; background-position: -557px 0}
 ul#nav li a#page-store:hover, ul#nav li.current_page a#page-store{background-position: -557px -47px}
 ul#nav li a#page-contact{width: 131px; background-position: -667px 0}
 ul#nav li a#page-contact:hover, ul#nav li.current_page a#page-contact{background-position: -667px -47px}
+*/
+
+ul#nav li a#page-tickets{width: 133px;}
+ul#nav li a#page-tickets:hover, ul#nav li.current_page a#page-tickets{background-position: 0 -47px}
+ul#nav li a#page-store{width: 113px; background-position: -133px 0}
+ul#nav li a#page-store:hover, ul#nav li.current_page a#page-store{background-position: -133px -47px;}
+ul#nav li a#page-contact{width: 141px; background-position: -246px 0}
+ul#nav li a#page-contact:hover, ul#nav li.current_page a#page-contact{background-position: -246px -47px}
+ul#nav li a#page-participants{width: 182px; background-position: -387px 0}
+ul#nav li a#page-participants:hover, ul#nav li.current_page a#page-participants{background-position: -387px -47px}
+ul#nav li a#page-sevierheights{width: 229px; background-position: -569px 0}
+ul#nav li a#page-sevierheights:hover, ul#nav li.current_page a#page-sevierheights{background-position: -569px -47px}
 
 /* Text, etc. */
 .entry-title, .archive-title{/*font-family: "Lucida Grande", Lucida, Helvetica, "Helvetica Neue", Arial, sans-serif;*/ color: #9c1d1f; font-size: 20px}

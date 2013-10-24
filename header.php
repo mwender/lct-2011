@@ -18,14 +18,20 @@
 			<div id="images-frame"></div>
 		</div><!-- #header-images -->
 		<ul id="nav"><?php
-		$main_menu = array( 'About', 'Get Involved', 'Tickets', 'Gallery', 'Store', 'Contact' );
+		//$main_menu = array( 'About', 'Get Involved', 'Tickets', 'Gallery', 'Store', 'Contact' );
+		$main_menu = array( 'Tickets', 'Store', 'Contact', 'Participants', 'SevierHeights.org' );
 		foreach( $main_menu as $post_title ){
-			$ids[$post_title] = $wpdb->get_var( 'SELECT ID FROM '.$wpdb->posts.' WHERE post_title="'.$post_title.'" AND post_type="page" AND post_status="publish"' );
+			$page = get_page_by_title( $post_title );
+			if( $page && ! is_wp_error( $page ) )
+				$ids[$page->post_title] = $page->ID;
 		}
 		foreach( $ids as $post_title => $ID ){
+			$search = array( ' ', '.org' );
+			$replace = array( '-', '' );
+			$post_title = strtolower( str_replace( $search, $replace, $post_title ) );
 			echo '<li';
 			if( $post_title == $post->post_title ) echo ' class="current_page"';
-			echo '><a href="'.get_permalink( $ID ).'" id="page-'.str_replace( ' ', '-', strtolower( $post_title ) ).'">'.$post_title.'</a></li>';
+			echo '><a href="'.get_permalink( $ID ).'" id="page-' . $post_title . '">'.$post_title.'</a></li>';
 		}
 		?></ul><!-- #nav -->
 		<div id="content">
