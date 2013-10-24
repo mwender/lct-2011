@@ -23,9 +23,11 @@ function hybrid_get_prefix() {
 	global $hybrid;
 
 	/* If the global prefix isn't set, define it. Plugin/theme authors may also define a custom prefix. */
-	if ( empty( $hybrid->prefix ) )
+	if ( empty( $hybrid->prefix ) ){
+		if (!is_object($hybrid)) {$hybrid = new stdClass; }
 		$hybrid->prefix = sanitize_key( apply_filters( 'hybrid_prefix', get_template() ) );
-
+	}
+	
 	return $hybrid->prefix;
 }
 
