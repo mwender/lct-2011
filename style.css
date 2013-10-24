@@ -1,0 +1,112 @@
+/**
+* Theme Name: LCT - 2011
+* Theme URI: http://www.sevierheights.org
+* Description: Custom theme designed by the Sevier Hieghts Creative Department, implemented by Michael Wender and built upon the <a href="http://themehybrid.com/hybrid-core" target="_blank">Hybrid Core</a>.
+* Version: 1.0
+* Author: Michael Wender
+* Author URI: http://www.michaelwender.com
+* Tags: christmas
+*/
+/* Reset CSS */
+@import url('includes/css/reset.css');
+
+/* Text CSS */
+@import url('includes/css/text.css');
+
+/* Layout */
+body{background: transparent url('includes/images/body.bkgrd.jpg') repeat-x; font: .85em/1.5em Georgia, 'Times Roman', serif ; color: #867457;} 
+/* 
+
+1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif
+*/
+#container{width: 798px; border: 1px solid #bfaa88; margin: 10px auto; background: #fff}
+#header{height: 89px; border-bottom: 1px solid #bfaa88}
+#header h1{width: 798px; height: 89px}
+#header h1 a{display: block; height: 89px; background: transparent url(includes/img/logo.png) no-repeat; text-indent: -9999px}
+#header-images{height: 284px; background: transparent url(includes/img/bkgrd.header-images.jpg) no-repeat; border-bottom: 1px solid #bfaa88; position: relative}
+#images-frame{width: 408px; height: 231px; border-style: solid; border-color: #988464; border-width: 5px 6px; position: absolute; top: 21px; left: 25px}
+#content{width: 435px; margin: 10px 60px 20px 303px; padding: 0 0 0 29px; border-left: 1px solid #bfaa88; min-height: 400px; float: right}
+.home #content{width: 460px; margin-right: 35px}
+#sidebar{width: 214px; margin: 10px -303px 0 30px; padding: 0 0 0 0; float: left}
+#footer{width: 460px; margin: 5px auto 10px auto; text-align: left; font-size: 12px; line-height: 20px; padding-left: 106px; background: url(includes/images/logo.sevierheights.png) no-repeat;}
+#footer a{color: #867457; text-decoration: none}
+#footer a:hover{text-decoration: underline}
+
+/* Navigation */
+ul#nav{list-style: none; margin: 0; height: 47px; clear: both}
+ul#nav li{margin: 0; float: left; height: 47px}
+ul#nav li a{display: block; line-height: 47px; background: transparent url(includes/img/menu.png) no-repeat; text-indent: -9999px}
+ul#nav li a#page-about{width: 113px;}
+ul#nav li a#page-about:hover, ul#nav li.current_page a#page-about{background-position: 0 -47px}
+ul#nav li a#page-get-involved{width: 186px; background-position: -113px 0}
+ul#nav li a#page-get-involved:hover, ul#nav li.current_page a#page-get-involved{background-position: -113px -47px}
+ul#nav li a#page-tickets{width: 123px; background-position: -300px 0}
+ul#nav li a#page-tickets:hover, ul#nav li.current_page a#page-tickets{background-position: -300px -47px}
+ul#nav li a#page-gallery{width: 134px; background-position: -423px 0}
+ul#nav li a#page-gallery:hover, ul#nav li.current_page a#page-gallery{background-position: -423px -47px}
+ul#nav li a#page-store{width: 110px; background-position: -557px 0}
+ul#nav li a#page-store:hover, ul#nav li.current_page a#page-store{background-position: -557px -47px}
+ul#nav li a#page-contact{width: 131px; background-position: -667px 0}
+ul#nav li a#page-contact:hover, ul#nav li.current_page a#page-contact{background-position: -667px -47px}
+
+/* Text, etc. */
+.entry-title, .archive-title{/*font-family: "Lucida Grande", Lucida, Helvetica, "Helvetica Neue", Arial, sans-serif;*/ color: #9c1d1f; font-size: 20px}
+.widgettitle{color: #991b1e}
+#sidebar .widgettitle{font-size: 18px; margin-bottom: .5em}
+#content p{text-align: justify}
+.subtitle{font: 10pt "Helvetica Neue", Helvetica, Arial, sans-serif; display: block; color: #867457; margin-top: 10px}
+.info{width: 200px; margin: 0 0 10px 20px; border: 1px solid #bfaa88; font-size: 14px; padding: 8px; line-height: 1.5em; float: right;}
+a, a:visited{color: #9c1d1f; text-decoration: none}
+a:hover, a:active{color: #9c1d1f; text-decoration: underline}
+
+/* Galleries */
+.gallery{width: auto}
+.gallery-item{margin: 6px 0 0 0; float: left; text-align: center}
+.gallery-item img{border: 3px solid #867457;}
+.gallery-icon a{display: block; line-height: 1}
+.gallery-row{white-space: nowrap}
+.gallery-columns-3 .gallery-item{width: 33%}
+.gallery-item{width: 20%}
+
+/* Gravity Forms */
+.gform_body input{font-size: 16px!important; padding: 2px 3px!important}
+.gform_body ul li{margin-left: 0}
+
+/* Alignments */
+.alignleft{float: left; margin: 5px 10px 0 0;}
+.alignright{float: right; margin: 5px 0 0 10px}
+.aligncenter{display: block; margin: 1em auto}
+
+/* Clear Floats */
+.clear{clear: both!important}
+
+/* Widgets */
+#sidebar-front-page .tweetlist{margin: 0 100px 0 0;}
+#sidebar-front-page .tweets .widgettitle{font-size: 20px}
+.ithemes-billboard a{text-decoration: none}
+#text-5 .widgettitle{font-size: 20px}
+#ithemes-billboard-3 .widgettitle{font-size: 18px}
+
+/* Text - Tweetlist */
+.view-more-tweets{text-align: left; font-weight: bold; margin-bottom: 30px}
+.tweets .widgettitle{margin-bottom: 12px}
+ul.tweetlist{/*font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px;*/}
+ul.tweetlist li{display: block; min-height: 48px; clear: both; margin: 0 0 20px 0;}
+ul.tweetlist li p{text-align: left!important}
+ul.tweetlist li.status-pending{}
+ul.tweetlist li img{width: 46px; height: 46px; border: 1px solid #bfaa88; padding: 1px;}
+.edit-tweet{text-align: right; border-top: 1px solid #666; clear: both; margin-top: 8px; padding: 4px 8px; background: #eee; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif}
+.edit-tweet a{padding: 2px 4px; -webkit-border-radius: 3px; font-weight: bold; font-size: 11px; text-decoration: none}
+.edit-tweet a:hover{text-decoration: none}
+
+.edit-tweet a.button{border: 1px solid #999; background-color: #ccc; color: #666}
+.edit-tweet a.button:hover{background-color: #fff; color: #000}
+.edit-tweet a.pending{background: #f2dd69; color: #8f5d0d; border: 1px solid #a66c10}
+div.pending{color: #8f5d0d}
+.edit-tweet a.publish{background: #b3db95; color: #090; border: 1px solid #060}
+div.publish{color: #090}
+.edit-tweet a.trash{background: #f65656; color: #fff; border: 1px solid #b63a3a}
+div.trash{color: #f65656}
+
+.edit-tweet .status{width: 100px; float: left; text-align: left; font-weight: bold; font-size: 12px}
+.edit-tweet .alert{color: #d00}
